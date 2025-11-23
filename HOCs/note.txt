@@ -1,0 +1,5 @@
+// HOC (Higher-Order Components)
+/*
+    - Advanced Method in React to Reuse Components. there is also custom hooks.
+    - Higher-Order Components is a function that takes a componenets and return a new Component.
+*/
