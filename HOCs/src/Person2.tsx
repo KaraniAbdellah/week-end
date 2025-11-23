@@ -1,17 +1,18 @@
-import { useState } from "react";
+import EnhancedComponent from "./HOC";
 
-const Person2 = () => {
-  const [count, setCount] = useState(0);
-
+const Person2 = ({ money, IncreaseMoney }) => {
   return (
-    <div className="p-6 max-w-sm mx-auto rounded-2xl bg-green-100 shadow-sm flex items-center justify-between">
-      <h3 className="text-lg font-semibold text-green-800">
-        Sara has: <span className="font-bold">{count}</span>
+    <div className="p-6 max-w-sm mx-auto rounded-2xl bg-zinc-900 shadow-lg">
+      <h3 className="text-xl font-semibold text-green-400">
+        Ahmed has: <span className="font-bold text-green-300">{money}</span>
       </h3>
+      <br />
 
       <button
-        onClick={() => setCount(count + 1)}
-        className="px-4 py-2 bg-green-600 text-white rounded-xl hover:bg-green-700 active:scale-95 transition"
+        onClick={IncreaseMoney}
+        className="px-5 py-2 rounded-xl bg-green-600 text-white font-medium
+                   hover:bg-green-500 hover:shadow-md active:scale-95
+                   transition-all duration-200"
       >
         Increase
       </button>
@@ -19,4 +20,4 @@ const Person2 = () => {
   );
 };
 
-export default Person2;
+export default EnhancedComponent(Person2);
